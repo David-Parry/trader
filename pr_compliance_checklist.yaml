@@ -6,7 +6,7 @@ pr_compliances:
     failure_criteria: "SQL operations can cause unintended side effects when executed multiple times"
 
   - title: "Parameterized Queries Compliance"
-    compliance_label: "sql-injection-compliance"
+    compliance_label: true
     objective: "Code must use parameterized queries to prevent SQL injection"
     success_criteria: "All SQL queries use prepared statements or parameterized queries, no direct string concatenation of user input"
     failure_criteria: "SQL queries concatenate user input directly into SQL strings"
@@ -30,7 +30,7 @@ pr_compliances:
     failure_criteria: "Database operations lack proper transaction boundaries or commit/rollback handling"
 
   - title: "Data Validation Compliance"
-    compliance_label: "data-validation-compliance"
+    compliance_label: true
     objective: "Code must validate data types and constraints"
     success_criteria: "Data types match expected formats and constraints are validated before executing SQL operations"
     failure_criteria: "Code executes SQL operations without validating data types or constraints"
