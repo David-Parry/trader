@@ -1,0 +1,60 @@
+pr_compliances:
+  - title: "SQL Operations Idempotency Compliance"
+    compliance_label: true
+    objective: "Code must ensure SQL operations are idempotent"
+    success_criteria: "SQL statements use conditional checks like IF NOT EXISTS for CREATE statements and WHERE clauses for UPDATE/DELETE operations"
+    failure_criteria: "SQL operations can cause unintended side effects when executed multiple times"
+
+  - title: "Parameterized Queries Compliance"
+    compliance_label: true
+    objective: "Code must use parameterized queries to prevent SQL injection"
+    success_criteria: "All SQL queries use prepared statements or parameterized queries, no direct string concatenation of user input"
+    failure_criteria: "SQL queries concatenate user input directly into SQL strings"
+
+  - title: "Error Handling Compliance"
+    compliance_label: true
+    objective: "Code must implement proper error handling for database operations"
+    success_criteria: "Database operations are wrapped in try-catch blocks with appropriate logging and rollback mechanisms"
+    failure_criteria: "Database operations lack proper error handling or transaction rollback mechanisms"
+
+  - title: "Null Checks Compliance"
+    compliance_label: true
+    objective: "Code must add defensive null checks before database operations"
+    success_criteria: "Null values are checked before performing database operations, especially for optional parameters or user input"
+    failure_criteria: "Code performs database operations without checking for null values"
+
+  - title: "Transaction Usage Compliance"
+    compliance_label: true
+    objective: "Code must use transactions appropriately"
+    success_criteria: "Related database operations are grouped within transactions with proper commit/rollback handling"
+    failure_criteria: "Database operations lack proper transaction boundaries or commit/rollback handling"
+
+  - title: "Data Validation Compliance"
+    compliance_label: true
+    objective: "Code must validate data types and constraints"
+    success_criteria: "Data types match expected formats and constraints are validated before executing SQL operations"
+    failure_criteria: "Code executes SQL operations without validating data types or constraints"
+
+  - title: "Connection Pooling Compliance"
+    compliance_label: true
+    objective: "Code must implement connection pooling"
+    success_criteria: "Database connections are managed efficiently using connection pooling to avoid connection leaks"
+    failure_criteria: "Code creates database connections without proper pooling or causes connection leaks"
+
+  - title: "Indexing Considerations Compliance"
+    compliance_label: true
+    objective: "Code must consider proper indexing"
+    success_criteria: "Queries consider impact on existing indexes and appropriate indexing is suggested for new queries"
+    failure_criteria: "Code ignores indexing considerations or creates queries that negatively impact performance"
+
+  - title: "Naming Conventions Compliance"
+    compliance_label: true
+    objective: "Code must use consistent naming conventions"
+    success_criteria: "Tables, columns, and database objects follow consistent naming patterns throughout the codebase"
+    failure_criteria: "Database objects use inconsistent or non-standard naming conventions"
+
+  - title: "Database Logging Compliance"
+    compliance_label: true
+    objective: "Code must log database operations appropriately"
+    success_criteria: "Meaningful logging is included for database operations, especially data modifications, with appropriate log levels"
+    failure_criteria: "Database operations lack proper logging or use inappropriate log levels"
