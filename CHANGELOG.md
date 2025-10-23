@@ -1,3 +1,10 @@
+## 2025-10-23 [*](https://github.com/David-Parry/trader/pull/9)
+
+### Added
+- Initial trading application scaffolding with DAO layer and H2 integration
+- Domain models with CRUD operations and supporting tests
+- Build tooling and configuration setup
+
 ## 2025-08-22 [*](https://github.com/David-Parry/trader/pull/1)
 
 ### Added
