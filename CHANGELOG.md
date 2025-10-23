@@ -1,3 +1,10 @@
+## 2025-10-23 [*](https://github.com/David-Parry/trader/pull/11)
+
+### Added
+- Initial app setup with data access layer, domain models, and H2 configuration
+- CRUD repositories, schema initialization, and basic service utilities
+- Unit tests and build tooling initialization
+
 ## 2025-10-23 [*](https://github.com/David-Parry/trader/pull/10)
 
 ### Added
